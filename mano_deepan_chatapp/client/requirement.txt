@@ -1,0 +1,18 @@
+## Dependencies 
+
+react: A JavaScript library for building user interfaces.
+react-router-dom: A library for routing and navigation in React applications.
+axios: A promise-based HTTP client for making requests to the server.
+firebase Authentication: Provides secure login and registration using Firebase Authentication.
+socket-io-client: Enables real-time communication for instant messaging.
+
+
+## .env
+
+REACT_APP_FIREBASE_API_KEY=your-api-key 
+REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+REACT_APP_FIREBASE_STORAGE_BUCKET=storage-bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=sender-id
+REACT_APP_FIREBASE_APP_ID=app-id
+REACT_APP_SERVER_URL=your-server-url
