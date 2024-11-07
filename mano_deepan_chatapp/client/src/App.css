@@ -1,0 +1,126 @@
+.dark {
+  background-color: black;
+  color: white;
+  transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+
+.light {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 3rem;
+}
+
+/* Login  */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-container {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 350px;
+  width: 500px;
+  padding: 12px;
+  box-shadow:0 11px 34px 0 rgba(0,0,0,.2);
+}
+
+.login-form {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-control:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+.account-form-btn {
+  display: inherit;
+  gap: 1.5rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* Reset password */
+
+.reset-form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Loader */
+
+.line-loader {
+  width: 100%;
+  height: 3px;
+  display: inline-block;
+  position: relative;
+  background: rgba(#85ff9c, 0.15);
+  overflow: hidden;
+  &::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #85ff9c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animFw 10s linear infinite;
+    
+  }
+}
+
+@keyframes animFw {
+  0% { width: 0}
+  100% { width:100%}
+}
+
+.blur-loader {
+  width: 320px;
+  height: 150px;
+  position: relative;
+  background: inherit;
+  &::after{
+    content: '';
+    width: 100% ;
+    height: 100%;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    background-image: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 80%),
+                      linear-gradient(#DDD 56px, transparent 0),
+                      linear-gradient(#DDD 24px, transparent 0),
+                      linear-gradient(#DDD 18px, transparent 0), 
+                      linear-gradient(#DDD 66px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
+    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+    animation: animblurloader 1s linear infinite;
+  }
+}
+
+@keyframes animblurloader {
+  0% { background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px}
+  100% { background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px}
+}
